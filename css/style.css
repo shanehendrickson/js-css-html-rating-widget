@@ -27,6 +27,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* FACE STYLES */
+
 .face {
   width: 150px;
   height: 150px;
@@ -34,7 +36,7 @@ body {
   background-color: var(--clr-face);
 }
 
-.eye-container {
+.face .eye-container {
   position: relative;
   left: 32px;
   top: 32px;
@@ -43,23 +45,121 @@ body {
   justify-content: space-between;
 }
 
-.eye {
+.face .eye-container .eye {
   background-color: var(--clr-features);
   width: 30px;
   height: 30px;
   border-radius: 50%;
 }
 
-.happy-mouth {
+.face .mouth-container {
+  position: relative;
   width: 75px;
-  height: 40px;
-  background-color:var(--clr-features);
+  left: 35px;
+  top: 60px;
+}
+
+.face .mouth-container .great-mouth {
+  width: 75px;
+  height: 37px;
+  background-color: var(--clr-features);
   border-radius: 10px 10px 150px 150px;
 }
 
-.mouth-container {
-  position: relative;
-  width: 75px;
-  left: 37px;
-  top: 60px;
+.face .eye-container .great-eye {
+  border-radius: 20px 20px 0 0;
+  height: 20px;
 }
+
+.face .mouth-container .happy-mouth {
+  width: 75px;
+  height: 40px;
+  background-color:var(--clr-face);
+  border-bottom: 5px solid var(--clr-features);
+  border-left: 5px solid var(--clr-features);
+  border-right: 5px solid var(--clr-features);
+  border-radius: 0 0 150px 150px;
+}
+
+.face .mouth-container .indifferent-mouth {
+  position: relative;
+  top: 10px;
+  width: 75px;
+  height: 10px;
+  background-color: var(--clr-features);
+  border-radius: 5px;
+}
+
+.face .mouth-container .sad-mouth {
+  width: 60px;
+  height: 30px;
+  position: relative;
+  left: 5px;
+  background-color:var(--clr-face);
+  border-top: 5px solid var(--clr-features);
+  border-left: 5px solid var(--clr-features);
+  border-right: 5px solid var(--clr-features);
+  border-radius: 150px 150px 0 0;
+}
+
+.face .mouth-container .awful-mouth {
+  width: 75px;
+  height: 40px;
+  position: relative;
+  top: -5px;
+  background-color: var(--clr-features);
+  border-radius: 150px 150px 10px 10px;
+}
+
+.face .eye-container .awful-eye {
+  position: relative;
+  top: 5px;
+  border-radius: 0 0 20px 20px;
+  height: 20px
+}
+
+.awful-eye:first-child {
+  transform: rotate(45deg);
+}
+
+.awful-eye:last-child {
+  transform: rotate(-45deg);
+}
+
+/* RATINGS STYLES */
+
+.ratings-container {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+
+
+.rating-container div {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin: 10px 0;
+}
+
+.ratings-container .rating-container div#awful {
+  background-color: rgb(216, 71, 71);
+}
+
+.ratings-container .rating-container div#bad {
+  background-color: rgb(216, 168, 71);
+}
+
+.ratings-container .rating-container div#okay {
+  background-color: rgb(201, 216, 71);
+}
+
+.ratings-container .rating-container div#good {
+  background-color: rgb(73, 216, 71);
+}
+
+.ratings-container .rating-container div#great {
+  background-color: rgb(71, 119, 216);
+}
+
+
