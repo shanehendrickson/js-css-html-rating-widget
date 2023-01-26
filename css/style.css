@@ -6,7 +6,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(1, 134, 134);
+  background-color: darkslategray;
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -33,7 +33,19 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  border: 2px solid black;
   background-color: var(--clr-face);
+}
+
+.face.angry-face {
+  background-color: rgb(251, 168, 133);
+  border: none;
+  box-shadow: 0 0 30px 10px rgb(187, 25, 25);
+}
+
+.face.joyful-face {
+  border: none;
+  box-shadow: 0 0 50px 15px rgb(60, 169, 246);
 }
 
 .face .eye-container {
@@ -81,7 +93,7 @@ body {
   border-radius: 0 0 150px 150px;
 }
 
-.face .mouth-container .indifferent-mouth {
+.face .mouth-container .okay-mouth {
   position: relative;
   top: 10px;
   width: 75px;
@@ -90,7 +102,7 @@ body {
   border-radius: 5px;
 }
 
-.face .mouth-container .sad-mouth {
+.face .mouth-container .bad-mouth {
   width: 60px;
   height: 30px;
   position: relative;
@@ -140,6 +152,7 @@ body {
   height: 60px;
   border-radius: 30px;
   margin: 10px 0;
+  cursor: pointer;
 }
 
 .ratings-container .rating-container div#awful {
